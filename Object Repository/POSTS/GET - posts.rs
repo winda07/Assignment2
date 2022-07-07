@@ -95,6 +95,12 @@ WS.verifyElementPropertyValue(response, '[7].body', 'dignissimos aperiam dolorem
 WS.verifyElementPropertyValue(response, '[8].userId', '1')
 WS.verifyElementPropertyValue(response, '[8].id', '9')
 WS.verifyElementPropertyValue(response, '[8].title', 'nesciunt iure omnis dolorem tempora et accusantium')
-WS.verifyElementPropertyValue(response, '[8].body', 'consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas')</verificationScript>
+WS.verifyElementPropertyValue(response, '[8].body', 'consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas')
+
+
+WS.verifyElementPropertyValue(response, '[9].userId', '1')
+WS.verifyElementPropertyValue(response, '[9].id', '10')
+WS.verifyElementPropertyValue(response, '[9].title', 'optio molestias id quia eum')
+WS.verifyElementPropertyValue(response, '[9].body', 'quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
