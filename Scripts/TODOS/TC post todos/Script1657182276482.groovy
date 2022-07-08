@@ -17,5 +17,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('TODOS/POST - todos'))
+response = WS.sendRequest(findTestObject('TODOS/POST - todos'))
+
+WS.verifyResponseStatusCode(response, 201, FailureHandling.STOP_ON_FAILURE)
+
+assert response.getStatusCode() == 201
+
+WS.verifyElementPropertyValue(response, 'userId', '1')
+
+WS.verifyElementPropertyValue(response, 'title', 'ini post todos')
+
+WS.verifyElementPropertyValue(response, 'completed', 'true')
 

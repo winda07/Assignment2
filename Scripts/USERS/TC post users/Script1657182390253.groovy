@@ -17,5 +17,37 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('USERS/POST - users'))
+response = WS.sendRequest(findTestObject('USERS/POST - users'))
+
+WS.verifyResponseStatusCode(response, 201, FailureHandling.STOP_ON_FAILURE)
+
+assert response.getStatusCode() == 201
+
+WS.verifyElementPropertyValue(response, 'name', 'akun test')
+
+WS.verifyElementPropertyValue(response, 'username', 'akuntest')
+
+WS.verifyElementPropertyValue(response, 'email', 'akuntest@gmail.com')
+
+WS.verifyElementPropertyValue(response, 'address.street', 'street boba')
+
+WS.verifyElementPropertyValue(response, 'address.suite', 'Apt. 556')
+
+WS.verifyElementPropertyValue(response, 'address.city', 'sorolangun')
+
+WS.verifyElementPropertyValue(response, 'address.zipcode', '48394')
+
+WS.verifyElementPropertyValue(response, 'address.geo.lat', '-37.3159')
+
+WS.verifyElementPropertyValue(response, 'address.geo.lng', '81.1496')
+
+WS.verifyElementPropertyValue(response, 'phone', '59848696656')
+
+WS.verifyElementPropertyValue(response, 'website', 'akuntest.org')
+
+WS.verifyElementPropertyValue(response, 'company.name', 'akun test')
+
+WS.verifyElementPropertyValue(response, 'company.catchPhrase', 'multi')
+
+WS.verifyElementPropertyValue(response, 'company.bs', 'e-markets')
 

@@ -9,8 +9,20 @@
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;  {\n    \&quot;name\&quot;: \&quot;akun test\&quot;,\n    \&quot;username\&quot;: \&quot;akuntest\&quot;,\n    \&quot;email\&quot;: \&quot;akuntest@gmail.com\&quot;,\n    \&quot;address\&quot;: {\n      \&quot;street\&quot;: \&quot;street boba\&quot;,\n      \&quot;suite\&quot;: \&quot;Apt. 556\&quot;,\n      \&quot;city\&quot;: \&quot;sorolangun\&quot;,\n      \&quot;zipcode\&quot;: \&quot;48394\&quot;,\n      \&quot;geo\&quot;: {\n        \&quot;lat\&quot;: \&quot;-37.3159\&quot;,\n        \&quot;lng\&quot;: \&quot;81.1496\&quot;\n      }\n    },\n    \&quot;phone\&quot;: \&quot;59848696656\&quot;,\n    \&quot;website\&quot;: \&quot;akuntest.org\&quot;,\n    \&quot;company\&quot;: {\n      \&quot;name\&quot;: \&quot;akun test\&quot;,\n      \&quot;catchPhrase\&quot;: \&quot;multi\&quot;,\n      \&quot;bs\&quot;: \&quot;e-markets\&quot;\n    }\n  }&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/json</value>
+      <webElementGuid>db07cce3-817c-4167-9eb1-9bf24b203fdb</webElementGuid>
+   </httpHeaderProperties>
    <katalonVersion>8.3.5</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -43,7 +55,6 @@ WS.verifyResponseStatusCode(response, 201)
 
 assertThat(response.getStatusCode()).isEqualTo(201)
 
-
-WS.verifyElementPropertyValue(response, 'id', '11')</verificationScript>
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

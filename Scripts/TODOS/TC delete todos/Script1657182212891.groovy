@@ -17,5 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('TODOS/DELETE - todos'))
+response = WS.sendRequest(findTestObject('TODOS/DELETE - todos'))
+
+WS.verifyResponseStatusCode(response, 200, FailureHandling.STOP_ON_FAILURE)
+
+assert response.getStatusCode() == 200
 

@@ -9,8 +9,20 @@
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n    \&quot;albumId\&quot;: 3,\n    \&quot;title\&quot;: \&quot;halakadabra\&quot;,\n    \&quot;url\&quot;: \&quot;https://via.placeholder.com/600/92c9100\&quot;,\n    \&quot;thumbnailUrl\&quot;: \&quot;https://via.placeholder.com/150/92c100\&quot;\n  }&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/json</value>
+      <webElementGuid>0c19f1da-9e93-42c4-90b7-f55d2c3505bc</webElementGuid>
+   </httpHeaderProperties>
    <katalonVersion>8.3.5</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -43,7 +55,6 @@ WS.verifyResponseStatusCode(response, 201)
 
 assertThat(response.getStatusCode()).isEqualTo(201)
 
-
-WS.verifyElementPropertyValue(response, 'id', '5001')</verificationScript>
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

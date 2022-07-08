@@ -17,5 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('COMMENTS/POST - comments'))
+response = WS.sendRequest(findTestObject('COMMENTS/POST - comments'))
+
+WS.verifyResponseStatusCode(response, 201, FailureHandling.STOP_ON_FAILURE)
+
+assert response.getStatusCode() == 201
+
+WS.verifyElementPropertyValue(response, 'postId', '5')
+
+WS.verifyElementPropertyValue(response, 'name', 'human')
+
+WS.verifyElementPropertyValue(response, 'email', 'akuntest@gmail.com')
+
+WS.verifyElementPropertyValue(response, 'body', 'ini akun test aja')
 
