@@ -17,5 +17,69 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('ALBUMS/GET - albums'))
+response = WS.sendRequest(findTestObject('ALBUMS/GET - albums'))
+
+WS.verifyResponseStatusCode(response, 200, FailureHandling.STOP_ON_FAILURE)
+
+assert response.getStatusCode() == 200
+
+WS.verifyElementPropertyValue(response, '[0].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[0].id', '1')
+
+WS.verifyElementPropertyValue(response, '[0].title', 'quidem molestiae enim')
+
+WS.verifyElementPropertyValue(response, '[1].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[1].id', '2')
+
+WS.verifyElementPropertyValue(response, '[1].title', 'sunt qui excepturi placeat culpa')
+
+WS.verifyElementPropertyValue(response, '[2].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[2].id', '3')
+
+WS.verifyElementPropertyValue(response, '[2].title', 'omnis laborum odio')
+
+WS.verifyElementPropertyValue(response, '[3].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[3].id', '4')
+
+WS.verifyElementPropertyValue(response, '[3].title', 'non esse culpa molestiae omnis sed optio')
+
+WS.verifyElementPropertyValue(response, '[4].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[4].id', '5')
+
+WS.verifyElementPropertyValue(response, '[4].title', 'eaque aut omnis a')
+
+WS.verifyElementPropertyValue(response, '[5].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[5].id', '6')
+
+WS.verifyElementPropertyValue(response, '[5].title', 'natus impedit quibusdam illo est')
+
+WS.verifyElementPropertyValue(response, '[6].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[6].id', '7')
+
+WS.verifyElementPropertyValue(response, '[6].title', 'quibusdam autem aliquid et et quia')
+
+WS.verifyElementPropertyValue(response, '[7].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[7].id', '8')
+
+WS.verifyElementPropertyValue(response, '[7].title', 'qui fuga est a eum')
+
+WS.verifyElementPropertyValue(response, '[8].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[8].id', '9')
+
+WS.verifyElementPropertyValue(response, '[8].title', 'saepe unde necessitatibus rem')
+
+WS.verifyElementPropertyValue(response, '[9].userId', '1')
+
+WS.verifyElementPropertyValue(response, '[9].id', '10')
+
+WS.verifyElementPropertyValue(response, '[9].title', 'distinctio laborum qui')
 
