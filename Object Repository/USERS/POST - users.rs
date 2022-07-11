@@ -55,6 +55,7 @@ WS.verifyResponseStatusCode(response, 201)
 
 assertThat(response.getStatusCode()).isEqualTo(201)
 
-</verificationScript>
+
+WS.verifyElementPropertyValue(response, 'username', 'akuntest')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

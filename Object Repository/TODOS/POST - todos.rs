@@ -56,6 +56,6 @@ WS.verifyResponseStatusCode(response, 201)
 assertThat(response.getStatusCode()).isEqualTo(201)
 
 
-</verificationScript>
+WS.verifyElementPropertyValue(response, 'title', 'ini post todos')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
